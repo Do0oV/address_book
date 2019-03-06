@@ -4,3 +4,4 @@ One page address book app. The user can create new contacts, find existing conta
 Use HTML, CSS, JavaScript and jQuery
 
 # Preview
+![preview](https://northern-lights.fr/address_book/screenshots/address_book.png)
