@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // removing error msg if any
     $('#warning').remove();
     // if required values are empty throw error msg and stop
-    if(fields.firstname.value === '' || fields.lastname.value === '' || fields.address.value === '' || fields.zip_address.value === '' || fields.city_address.value === '' || fields.phone.value === '') {
+    if (fields.firstname.value === '' || fields.lastname.value === '' || fields.address.value === '' || fields.zip_address.value === '' || fields.city_address.value === '' || fields.phone.value === '') {
 
       add_submit.insertAdjacentHTML('afterend', '<div id="warning">Please fill all the fields!</div>');
 
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     // check if addresses array is empty (no data in the address book)
     // - if so empty result & display msg
-    } else if(addresses.length === 0) {
+    } else if (addresses.length === 0) {
 
       $('#container_result').empty();
       $('#container_result').append( '<div class="empty">There is nothing here</div>' );
@@ -203,18 +203,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
       $('#container_result').empty();
       // Ordering result alphabetically
       addresses.sort((a,b) => {
-        if(a.lastname.toLowerCase() < b.lastname.toLowerCase()) {
+        if (a.lastname.toLowerCase() < b.lastname.toLowerCase()) {
           return -1;
         }
-        if(a.lastname.toLowerCase() > b.lastname.toLowerCase()) {
+        if (a.lastname.toLowerCase() > b.lastname.toLowerCase()) {
           return 1;
-        }
-        else {
+        } else {
           return 0;
         }
       });
       // iterate through addresses array and filling the result section
-      addresses.forEach((element) => {
+      addresses.forEach( (element) => {
       // formatting phone number to be more readable
         let phone = element.phone.substr(0,3) +' '+ element.phone.substr(3,3) + ' ' + element.phone.substr(6,3);
         // add element in the result section
@@ -240,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         more[i].addEventListener('click', function(event) {
           event.preventDefault();
           // changing icon accordingly
-          if(this.innerHTML === arrow_down) {
+          if (this.innerHTML === arrow_down) {
             this.innerHTML = arrow_up;
           } else {
             this.innerHTML = arrow_down;
@@ -266,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
       return element.lastname.toLowerCase().startsWith(filter) || element.firstname.toLowerCase().startsWith(filter) || element.phone.includes(filter);
     });
     // if no match send false to showPerson function
-    if(query.length === 0) {
+    if (query.length === 0) {
       showPerson(false);
     // if matches pass the result to showPerson function
     } else {

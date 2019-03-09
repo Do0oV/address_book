@@ -23,8 +23,12 @@ module.exports = {
             'unix'
         ],
         'quotes': [
-            'error',
-            'single'
+        'error',
+        'single',
+         {
+        avoidEscape: true,
+        allowTemplateLiterals: true
+        }
         ],
         'semi': [
             'error',
