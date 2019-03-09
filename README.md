@@ -5,4 +5,5 @@ Use HTML, CSS, JavaScript and jQuery
 
 # Preview
 
-![Alt-Text](/uploads/f01a8298e57c6e922f65067d6cabe958/address_book.png)
+![preview](https://northern-lights.fr/address_book/screenshots/address_book.png)
+
